@@ -52,3 +52,57 @@ git pull origin main -> pega alterações que estão no github, mas não estão 
 git clone link_do_repositório -> encontrado no botão code de um repositório
  
 git status -> exibe o que foi alterado/adicionado/excluido do projeto.
+
+
+
+# Branchs
+
+São ramificações do projeto, o qual permite vários desenvolvedores, trabalharem em diferentes funcionalidades, sem bugar a versão estável.
+
+## Principais branchs 
+
+Branch main -> que é a branch principal, ou seja, a branch estável de aplicação. Versão que é disponibilizada aos clientes.
+
+Branch developer -> é a branch utilizada pelos testers. Os quais vão testar as novas funcionalidades, correções de bugs etc.
+
+## Outras branchs
+
+Para cada nova funcionalidade ou correção de bugs é criada uma nova branch.
+
+### Padrões para criar nomes de branchs
+
+!IMPORTANTE! Nomes de branchs não tem acentos ou Ç
+
+Para correção de bugs: fix_identificacao_do_bug
+Exemplo: fix_cor_do_cabecalho
+
+Para novas funcionalidades:
+feat_identificacao_da_nova_funcionalidade
+Exemplo: feat_integracao_com_google, feat_nova_tela_de_contato
+
+Para atualizar documentação: doc_identificacao_da_alteracao
+Exemplo: doc_adicionando_nova_imagem
+
+Para criação/alteração de tarefas que não interfere no código:
+chore_identificacao_da_modificacao
+Exemplo: chore_atualizado_a_versao_do_banco
+
+## Criação de novas branchs
+
+git checkout -b nome_da_nova_branch
+Exemplo: git checkout -b fix_botao_da_tela_login
+Obs: O ideal é sempre criar as branchs a partir da main.
+
+### Listar as branchs existentes
+
+git branch list
+
+### Trocar de branch
+git switch nome_da_branch_que_deseja_entrar
+Exemplo 01: git switch fix_botao_da_tela_login
+Exemplo 02: git switch main
+
+### Excluir uma branch
+git branch -O nome_da_branch_que_deseja_excluir
+Exemplo: git branch -O fix_botao_da_tela_login
+
